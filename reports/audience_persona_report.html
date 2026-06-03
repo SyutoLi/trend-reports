@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>受眾輪廓洞察報告 | 母嬰育兒社群分析</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+:root{--primary:#2D5BE3;--accent:#FF6B35;--bg:#F8F9FC;--card:#fff;--text:#1a1a2e;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans TC','Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+.hero{background:linear-gradient(135deg,#2D5BE3 0%,#5B21B6 100%);color:#fff;padding:40px 60px}
+.hero h1{font-size:2rem;font-weight:700;margin-bottom:8px}
+.hero .meta{opacity:.8;font-size:.9rem}
+.container{max-width:1200px;margin:0 auto;padding:40px 60px}
+.section{margin-bottom:48px}
+.section-title{font-size:1.3rem;font-weight:700;color:var(--primary);margin-bottom:20px;padding-bottom:8px;border-bottom:2px solid var(--primary)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.card{background:var(--card);border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.stat-card{text-align:center}
+.stat-num{font-size:2.4rem;font-weight:800;color:var(--primary)}
+.stat-label{color:var(--muted);font-size:.85rem;margin-top:4px}
+.chart-box{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.chart-title{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:12px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tag{padding:6px 14px;border-radius:20px;font-size:.85rem;font-weight:500}
+.tag-blue{background:#EFF6FF;color:#1D4ED8}
+.tag-orange{background:#FFF7ED;color:#C2410C}
+.tag-green{background:#F0FDF4;color:#15803D}
+.tag-red{background:#FEF2F2;color:#B91C1C}
+.persona-card{border-left:4px solid var(--primary);padding:16px 20px;background:var(--card);border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:12px}
+.persona-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.persona-card .count{font-size:1.3rem;font-weight:800}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:#F1F5F9;text-align:left;padding:10px 14px;font-weight:600}
+td{padding:10px 14px;border-bottom:1px solid #F1F5F9}
+.badge-pos{background:#DCFCE7;color:#15803D;padding:2px 8px;border-radius:10px;font-size:.8rem}
+.badge-neg{background:#FEE2E2;color:#B91C1C;padding:2px 8px;border-radius:10px;font-size:.8rem}
+.footer{background:#1a1a2e;color:#94a3b8;text-align:center;padding:24px;font-size:.85rem}
+.insight-box{background:linear-gradient(135deg,#EFF6FF,#F0FDF4);border-radius:12px;padding:20px 24px}
+.insight-box h4{color:var(--primary);font-size:.95rem;margin-bottom:8px}
+.insight-box ul{padding-left:20px;font-size:.9rem;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>&#x1F4CA; 母嬰育兒受眾輪廓洞察報告</h1>
+  <div class="meta">分析資料：35,757 篇社群討論 &#xFF5C; PTT / Mamaclub / Mombaby / Babyhome Forum &#xFF5C; 2026-06-03</div>
+</div>
+<div class="container">
+
+  <div class="section">
+    <div class="section-title">&#x1F4CC; 資料總覽</div>
+    <div class="grid-3">
+      <div class="card stat-card"><div class="stat-num">35,757</div><div class="stat-label">社群文章總數</div></div>
+      <div class="card stat-card"><div class="stat-num">8,137</div><div class="stat-label">求推薦發文（高購買意圖）</div></div>
+      <div class="card stat-card"><div class="stat-num">3,478</div><div class="stat-label">踩雷警示帖（負評信號）</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F476; 育兒生命週期分段</div>
+    <div class="grid-2">
+      
+<div class="chart-box">
+<div class="chart-title">各生命週期討論量</div>
+<div id="c830229" style="height:340px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u5099\u5b55\u671f", "\u61f7\u5b55\u671f", "\u65b0\u751f\u5152 0-3m", "\u5b30\u5152 3m-1y", "\u5e7c\u5152 1-3y", "\u5b78\u9f61\u524d 3y+"], "values": [474, 5779, 7917, 3221, 6097, 2847]};
+  Plotly.newPlot('c830229',
+    [{type:'bar',x:d.values,y:d.labels,orientation:'h',
+       marker:{color:'#8B5CF6'},text:d.values.map(String),textposition:'outside'}],
+    {margin:{l:120,r:60,t:20,b:40},height:340,
+     xaxis:{showgrid:false},yaxis:{autorange:'reversed'},
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent'},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+      <div class="insight-box" style="align-self:center">
+        <h4>&#x1F4A1; 廣告投放建議</h4>
+        <ul>
+          <li><b>新生兒 0-3m</b> 討論量最高 — 月子中心、哺乳產品黃金期</li>
+          <li><b>幼兒 1-3y</b> 第二高 — 托嬰選擇、語言發展焦慮強</li>
+          <li><b>懷孕期</b> 大量待產採購需求 — 精準鎖定安胎與備物廣告</li>
+          <li><b>備孕期</b> 篇數少但客單價高 — 保健品精準投放</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="persona-card" style="border-left-color:#8B5CF6">
+  <h3>👶 備孕期 — <span class="count" style="color:#8B5CF6">474 篇</span></h3>
+  <p style="font-size:.88rem;color:#64748b;margin-bottom:8px">正積極備孕，補充葉酸、監測排卵期、調整體能</p>
+  <div class="tag-cloud"><span class="tag tag-blue">備孕保健品</span><span class="tag tag-blue">孕前諮詢</span><span class="tag tag-blue">生育追蹤App</span></div>
+</div>
+<div class="persona-card" style="border-left-color:#EC4899">
+  <h3>🤱 懷孕期 — <span class="count" style="color:#EC4899">5,779 篇</span></h3>
+  <p style="font-size:.88rem;color:#64748b;margin-bottom:8px">孕期照護、產前準備、待產包採購高峰</p>
+  <div class="tag-cloud"><span class="tag tag-blue">孕婦裝</span><span class="tag tag-blue">安胎產品</span><span class="tag tag-blue">待產包廣告</span></div>
+</div>
+<div class="persona-card" style="border-left-color:#F59E0B">
+  <h3>🍼 新生兒 0-3m — <span class="count" style="color:#F59E0B">7,917 篇</span></h3>
+  <p style="font-size:.88rem;color:#64748b;margin-bottom:8px">坐月子、哺乳、新生兒護膚是最大討論量</p>
+  <div class="tag-cloud"><span class="tag tag-blue">月子中心</span><span class="tag tag-blue">哺乳用品</span><span class="tag tag-blue">新生兒護膚品</span></div>
+</div>
+<div class="persona-card" style="border-left-color:#10B981">
+  <h3>🧸 嬰兒 3m-1y — <span class="count" style="color:#10B981">3,221 篇</span></h3>
+  <p style="font-size:.88rem;color:#64748b;margin-bottom:8px">副食品製作、爬行玩具、嬰兒車選購</p>
+  <div class="tag-cloud"><span class="tag tag-blue">副食品調理機</span><span class="tag tag-blue">爬行墊</span><span class="tag tag-blue">學步車</span></div>
+</div>
+<div class="persona-card" style="border-left-color:#3B82F6">
+  <h3>🎠 幼兒 1-3y — <span class="count" style="color:#3B82F6">6,097 篇</span></h3>
+  <p style="font-size:.88rem;color:#64748b;margin-bottom:8px">幼兒園選擇、語言發展、睡眠訓練</p>
+  <div class="tag-cloud"><span class="tag tag-blue">托嬰廣告</span><span class="tag tag-blue">繪本訂閱</span><span class="tag tag-blue">益智玩具</span></div>
+</div>
+<div class="persona-card" style="border-left-color:#6366F1">
+  <h3>🏫 學齡前 3y+ — <span class="count" style="color:#6366F1">2,847 篇</span></h3>
+  <p style="font-size:.88rem;color:#64748b;margin-bottom:8px">才藝班、英文啟蒙、小學準備</p>
+  <div class="tag-cloud"><span class="tag tag-blue">英語App</span><span class="tag tag-blue">才藝課程</span><span class="tag tag-blue">文具書包</span></div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F4AC; 熱門話題 &amp; 產品關鍵詞（Meta 廣告興趣標籤）</div>
+    <div class="grid-2">
+      
+<div class="chart-box">
+<div class="chart-title">話題聲量 Top 10</div>
+<div id="c786873" style="height:360px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u4fdd\u6bcd", "\u5e7c\u5152\u5712", "\u89aa\u9935", "\u904e\u654f", "\u75ab\u82d7", "\u526f\u98df\u54c1", "\u5b89\u64ab", "\u6bcd\u4e73", "\u767c\u71d2", "\u6258\u5b30\u4e2d\u5fc3"], "values": [19545, 10471, 8630, 7039, 6806, 6711, 6090, 5755, 5729, 4067]};
+  Plotly.newPlot('c786873',
+    [{type:'bar',x:d.values,y:d.labels,orientation:'h',
+       marker:{color:'#3B82F6'},text:d.values.map(String),textposition:'outside'}],
+    {margin:{l:120,r:60,t:20,b:40},height:360,
+     xaxis:{showgrid:false},yaxis:{autorange:'reversed'},
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent'},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+      
+<div class="chart-box">
+<div class="chart-title">產品類別聲量 Top 10</div>
+<div id="c292929" style="height:360px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u5c3f\u5e03", "\u63a8\u8eca", "\u73a9\u5177", "\u5976\u5634", "\u5976\u7c89", "\u5976\u74f6", "\u6c7d\u5ea7", "\u5b30\u5152\u5e8a", "\u63d0\u7c43", "\u76e3\u8996\u5668"], "values": [12109, 11834, 10559, 7519, 6036, 5683, 5208, 3960, 3221, 2955]};
+  Plotly.newPlot('c292929',
+    [{type:'bar',x:d.values,y:d.labels,orientation:'h',
+       marker:{color:'#10B981'},text:d.values.map(String),textposition:'outside'}],
+    {margin:{l:120,r:60,t:20,b:40},height:360,
+     xaxis:{showgrid:false},yaxis:{autorange:'reversed'},
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent'},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="chart-title">關鍵詞雲（可直接對應 Meta 廣告興趣標籤）</div>
+      <div class="tag-cloud"><span class="tag tag-blue" style="font-size:1.9rem">保母(19545)</span><span class="tag tag-blue" style="font-size:1.9rem">幼兒園(10471)</span><span class="tag tag-blue" style="font-size:1.9rem">親餵(8630)</span><span class="tag tag-blue" style="font-size:1.9rem">過敏(7039)</span><span class="tag tag-blue" style="font-size:1.9rem">疫苗(6806)</span><span class="tag tag-blue" style="font-size:1.9rem">副食品(6711)</span><span class="tag tag-blue" style="font-size:1.9rem">安撫(6090)</span><span class="tag tag-blue" style="font-size:1.9rem">母乳(5755)</span><span class="tag tag-blue" style="font-size:1.9rem">發燒(5729)</span><span class="tag tag-blue" style="font-size:1.7rem">托嬰中心(4067)</span><span class="tag tag-blue" style="font-size:1.6rem">說話(3949)</span><span class="tag tag-blue" style="font-size:1.6rem">配方奶(3750)</span><span class="tag tag-blue" style="font-size:1.6rem">哺乳(3609)</span><span class="tag tag-blue" style="font-size:1.5rem">公托(3378)</span><span class="tag tag-blue" style="font-size:1.4rem">哄睡(2788)</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F623; 主要痛點與疑慮</div>
+    <div class="grid-2">
+      
+<div class="chart-box">
+<div class="chart-title">疑慮關鍵詞 Top 10</div>
+<div id="c318033" style="height:360px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u7d05\u75b9", "\u9000\u8ca8", "\u767c\u9709", "\u56de\u6536", "\u7121\u6bd2", "\u7dad\u4fee", "\u7834\u88c2", "\u6295\u8a34", "\u9999\u6599", "\u91cd\u91d1\u5c6c"], "values": [937, 525, 468, 441, 418, 384, 378, 365, 343, 302]};
+  Plotly.newPlot('c318033',
+    [{type:'bar',x:d.values,y:d.labels,orientation:'h',
+       marker:{color:'#EF4444'},text:d.values.map(String),textposition:'outside'}],
+    {margin:{l:120,r:60,t:20,b:40},height:360,
+     xaxis:{showgrid:false},yaxis:{autorange:'reversed'},
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent'},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+      <div class="card">
+        <div class="chart-title">痛點對應廣告文案建議</div>
+        <br>
+        <table>
+          <tr><th>痛點</th><th>聲量</th><th>廣告切入角度</th></tr>
+          <tr><td>紅疹 (937)</td><td>&#x1F534; 高</td><td>「無刺激配方，敏感寶寶首選」</td></tr>
+          <tr><td>退貨 (525)</td><td>&#x1F534; 高</td><td>「30天免費退換，放心購買」</td></tr>
+          <tr><td>發霉 (468)</td><td>&#x1F7E0; 中</td><td>「抗菌防霉設計，媽媽安心」</td></tr>
+          <tr><td>無毒 (441)</td><td>&#x1F7E0; 中</td><td>「SGS/FDA認證，安全核心」</td></tr>
+          <tr><td>香料 (418)</td><td>&#x1F7E1; 中</td><td>「純天然無添加，最放心的選擇」</td></tr>
+        </table>
+        <br>
+        <div class="tag-cloud"><span class="tag tag-red" style="font-size:1.6rem">紅疹(937)</span><span class="tag tag-red" style="font-size:1.6rem">退貨(525)</span><span class="tag tag-red" style="font-size:1.5rem">發霉(468)</span><span class="tag tag-red" style="font-size:1.5rem">回收(441)</span><span class="tag tag-red" style="font-size:1.5rem">無毒(418)</span><span class="tag tag-red" style="font-size:1.4rem">維修(384)</span><span class="tag tag-red" style="font-size:1.4rem">破裂(378)</span><span class="tag tag-red" style="font-size:1.4rem">投訴(365)</span><span class="tag tag-red" style="font-size:1.3rem">香料(343)</span><span class="tag tag-red" style="font-size:1.2rem">重金屬(302)</span><span class="tag tag-red" style="font-size:1.2rem">過敏反應(278)</span><span class="tag tag-red" style="font-size:1.2rem">過期(277)</span><span class="tag tag-red" style="font-size:1.2rem">保固(276)</span><span class="tag tag-red" style="font-size:1.2rem">申訴(260)</span><span class="tag tag-red" style="font-size:1.1rem">瑕疵(234)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F6D2; 購買意圖分析</div>
+    <div class="grid-2">
+      
+<div class="chart-box">
+<div class="chart-title">討論類型分布</div>
+<div id="c845996" style="height:320px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u6c42\u63a8\u85a6", "\u6bd4\u8f03\u9078\u8cfc", "\u8a62\u554f\u50f9\u683c", "\u8e29\u96f7\u8b66\u793a", "\u958b\u7bb1\u5fc3\u5f97"], "values": [8137, 15969, 3481, 3478, 12393]};
+  var trace={type:'pie',labels:d.labels,values:d.values,hole:0.45,
+    textinfo:'label+percent',textposition:'outside'};
+  if(["#3B82F6", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6"]) trace.marker={colors:["#3B82F6", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6"]};
+  Plotly.newPlot('c845996',[trace],
+    {margin:{l:20,r:20,t:20,b:20},height:320,
+     paper_bgcolor:'transparent',showlegend:false},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+      <div class="card">
+        <div class="chart-title">各意圖對應廣告策略</div>
+        <br>
+        <table>
+          <tr><th>行為</th><th>篇數</th><th>廣告策略</th></tr>
+          <tr><td>&#x1F50D; 比較選購</td><td>15,969</td><td>比較型廣告、功能對比表</td></tr>
+          <tr><td>&#x1F4E6; 開箱心得</td><td>12,393</td><td>UGC 素材再行銷</td></tr>
+          <tr><td>&#x26A0;&#xFE0F; 踩雷警示</td><td>3,478</td><td>競品負評對應防守廣告</td></tr>
+          <tr><td>&#x1F64B; 求推薦</td><td>8,137</td><td>精準投放「選購困難」受眾</td></tr>
+          <tr><td>&#x1F4B0; 詢問價格</td><td>3,481</td><td>促銷優惠廣告</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F4C5; 月度討論趨勢（近12個月）</div>
+    
+<div class="chart-box">
+<div class="chart-title">每月社群討論量</div>
+<div id="c876165" style="height:280px"></div>
+<script>
+(function(){
+  var d={"x": ["2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"], "y": [417, 445, 384, 366, 374, 414, 430, 322, 354, 359, 416, 844]};
+  Plotly.newPlot('c876165',
+    [{type:'scatter',x:d.x,y:d.y,mode:'lines+markers',
+       line:{color:'#4F81BD',width:2},fill:'tozeroy',fillcolor:'rgba(79,129,189,0.1)'}],
+    {margin:{l:50,r:20,t:20,b:60},height:280,
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent',
+     xaxis:{showgrid:false},yaxis:{showgrid:true,gridcolor:'#eee'}},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F4F1; 平台分布</div>
+    <div class="grid-2">
+      
+<div class="chart-box">
+<div class="chart-title">資料來源分布</div>
+<div id="c932534" style="height:320px"></div>
+<script>
+(function(){
+  var d={"labels": ["Babyhome Forum", "Mamaclub", "Mamibuy", "Mombaby", "PTT"], "values": [4589, 5991, 198, 4995, 19984]};
+  var trace={type:'pie',labels:d.labels,values:d.values,hole:0.45,
+    textinfo:'label+percent',textposition:'outside'};
+  if(null) trace.marker={colors:null};
+  Plotly.newPlot('c932534',[trace],
+    {margin:{l:20,r:20,t:20,b:20},height:320,
+     paper_bgcolor:'transparent',showlegend:false},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+      <div class="card">
+        <div class="chart-title">各平台受眾特性</div>
+        <br>
+        <table>
+          <tr><th>平台</th><th>篇數</th><th>受眾特性</th></tr>
+          <tr><td>PTT</td><td>19,984</td><td>匿名討論、真實評價、高互動</td></tr>
+          <tr><td>Mamaclub</td><td>5,991</td><td>女性社群、生活話題廣泛</td></tr>
+          <tr><td>Mombaby</td><td>4,995</td><td>編輯媒體、高信任度內容</td></tr>
+          <tr><td>Babyhome Forum</td><td>4,589</td><td>母嬰垂直社群、購物討論</td></tr>
+          <tr><td>Mamibuy</td><td>198</td><td>母嬰電商平台評論</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footer">母嬰育兒社群口碑分析系統 trend-monitor | 2026-06-03</div>
+</body></html>
