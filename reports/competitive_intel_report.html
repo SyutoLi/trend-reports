@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>競品口碑情報報告 | 母嬰品牌分析</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+:root{--primary:#2D5BE3;--accent:#FF6B35;--bg:#F8F9FC;--card:#fff;--text:#1a1a2e;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans TC','Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+.hero{background:linear-gradient(135deg,#2D5BE3 0%,#5B21B6 100%);color:#fff;padding:40px 60px}
+.hero h1{font-size:2rem;font-weight:700;margin-bottom:8px}
+.hero .meta{opacity:.8;font-size:.9rem}
+.container{max-width:1200px;margin:0 auto;padding:40px 60px}
+.section{margin-bottom:48px}
+.section-title{font-size:1.3rem;font-weight:700;color:var(--primary);margin-bottom:20px;padding-bottom:8px;border-bottom:2px solid var(--primary)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.card{background:var(--card);border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.stat-card{text-align:center}
+.stat-num{font-size:2.4rem;font-weight:800;color:var(--primary)}
+.stat-label{color:var(--muted);font-size:.85rem;margin-top:4px}
+.chart-box{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.chart-title{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:12px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tag{padding:6px 14px;border-radius:20px;font-size:.85rem;font-weight:500}
+.tag-blue{background:#EFF6FF;color:#1D4ED8}
+.tag-orange{background:#FFF7ED;color:#C2410C}
+.tag-green{background:#F0FDF4;color:#15803D}
+.tag-red{background:#FEF2F2;color:#B91C1C}
+.persona-card{border-left:4px solid var(--primary);padding:16px 20px;background:var(--card);border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:12px}
+.persona-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.persona-card .count{font-size:1.3rem;font-weight:800}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:#F1F5F9;text-align:left;padding:10px 14px;font-weight:600}
+td{padding:10px 14px;border-bottom:1px solid #F1F5F9}
+.badge-pos{background:#DCFCE7;color:#15803D;padding:2px 8px;border-radius:10px;font-size:.8rem}
+.badge-neg{background:#FEE2E2;color:#B91C1C;padding:2px 8px;border-radius:10px;font-size:.8rem}
+.footer{background:#1a1a2e;color:#94a3b8;text-align:center;padding:24px;font-size:.85rem}
+.insight-box{background:linear-gradient(135deg,#EFF6FF,#F0FDF4);border-radius:12px;padding:20px 24px}
+.insight-box h4{color:var(--primary);font-size:.95rem;margin-bottom:8px}
+.insight-box ul{padding-left:20px;font-size:.9rem;line-height:1.8}
+
+.hero{background:linear-gradient(135deg,#7C3AED 0%,#DB2777 100%)!important}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>&#x1F3C6; 母嬰競品口碑情報報告</h1>
+  <div class="meta">分析資料：35,757 篇 &#xFF5C; 品牌監測：56 個 &#xFF5C; 2026-06-03</div>
+</div>
+<div class="container">
+
+  <div class="section">
+    <div class="section-title">&#x1F4CC; 品牌監測總覽</div>
+    <div class="grid-3">
+      <div class="card stat-card"><div class="stat-num">3,543</div><div class="stat-label">聲量冠軍：好奇</div></div>
+      <div class="card stat-card"><div class="stat-num">15</div><div class="stat-label">有效情緒分析品牌數</div></div>
+      <div class="card stat-card"><div class="stat-num">937</div><div class="stat-label">最高疑慮：紅疹</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F4E2; 品牌聲量（Share of Voice）</div>
+    <div class="grid-2">
+      
+<div class="chart-box">
+<div class="chart-title">品牌提及次數 Top 12</div>
+<div id="c75269" style="height:400px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u597d\u5947", "\u8c9d\u89aa", "\u5e6b\u5bf6\u9069", "\u6a02\u9ad8", "Chicco", "\u5947\u54e5", "\u8cbb\u96ea", "Stokke", "\u7f8e\u5f37\u751f", "Combi", "\u9e97\u5b30\u623f", "\u96c0\u5de2"], "values": [3543, 1177, 1043, 581, 539, 514, 307, 295, 291, 263, 251, 248]};
+  Plotly.newPlot('c75269',
+    [{type:'bar',x:d.values,y:d.labels,orientation:'h',
+       marker:{color:'#7C3AED'},text:d.values.map(String),textposition:'outside'}],
+    {margin:{l:120,r:60,t:20,b:40},height:400,
+     xaxis:{showgrid:false},yaxis:{autorange:'reversed'},
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent'},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+      
+<div class="chart-box">
+<div class="chart-title">聲量市佔分布 Top 8</div>
+<div id="c193788" style="height:320px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u597d\u5947", "\u8c9d\u89aa", "\u5e6b\u5bf6\u9069", "\u6a02\u9ad8", "Chicco", "\u5947\u54e5", "\u8cbb\u96ea", "Stokke"], "values": [3543, 1177, 1043, 581, 539, 514, 307, 295]};
+  var trace={type:'pie',labels:d.labels,values:d.values,hole:0.45,
+    textinfo:'label+percent',textposition:'outside'};
+  if(null) trace.marker={colors:null};
+  Plotly.newPlot('c193788',[trace],
+    {margin:{l:20,r:20,t:20,b:20},height:320,
+     paper_bgcolor:'transparent',showlegend:false},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+    </div>
+    <br>
+    <div class="insight-box">
+      <h4>&#x1F4A1; 聲量洞察</h4>
+      <ul>
+        <li><b>好奇</b>（3,543次）以絕對優勢佔據話題中心，是市場領導品牌</li>
+        <li><b>貝親</b>（1,177次）、<b>幫寶適</b>（1,043次）是第二梯隊，競爭激烈</li>
+        <li>中小品牌有發展空間，口碑建立是突破關鍵</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F49A; 品牌情緒分析（Sentiment Analysis）</div>
+    <div class="grid-2">
+      
+<div class="chart-box">
+<div class="chart-title">品牌淨情緒分數（正評脈絡 - 負評脈絡）</div>
+<div id="csent" style="height:380px"></div>
+<script>
+(function(){
+  var d={"brands": ["\u597d\u5947", "\u8c9d\u89aa", "\u5e6b\u5bf6\u9069", "\u6a02\u9ad8", "Chicco", "\u5947\u54e5", "\u8cbb\u96ea", "Stokke", "\u7f8e\u5f37\u751f", "Combi", "\u9e97\u5b30\u623f", "\u96c0\u5de2"], "nets": [16.5, 22.7, 25.6, 35.5, 32.3, 34.0, 27.4, 30.1, 22.0, 25.2, 17.9, 17.3], "colors": ["#10B981", "#10B981", "#10B981", "#10B981", "#10B981", "#10B981", "#10B981", "#10B981", "#10B981", "#10B981", "#10B981", "#10B981"]};
+  Plotly.newPlot('csent',
+    [{type:'bar',x:d.nets,y:d.brands,orientation:'h',
+       marker:{color:d.colors},
+       text:d.nets.map(function(v){return v+'%'}),textposition:'outside'}],
+    {margin:{l:100,r:80,t:20,b:40},height:380,
+     xaxis:{title:'淨情緒分數 (%)',zeroline:true,zerolinecolor:'#666'},
+     yaxis:{autorange:'reversed'},
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent'},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+      <div class="card">
+        <div class="chart-title">品牌情緒詳細數據</div>
+        <br>
+        <table>
+          <tr><th>品牌</th><th>總聲量</th><th>正面脈絡</th><th>負面脈絡</th><th>淨情緒</th></tr>
+          <tr><td><b>好奇</b></td><td>2,323</td><td>1,830</td><td>1,447</td><td><span class="badge-pos">+16.5%</span></td></tr><tr><td><b>貝親</b></td><td>409</td><td>301</td><td>208</td><td><span class="badge-pos">+22.7%</span></td></tr><tr><td><b>幫寶適</b></td><td>293</td><td>243</td><td>168</td><td><span class="badge-pos">+25.6%</span></td></tr><tr><td><b>樂高</b></td><td>197</td><td>182</td><td>112</td><td><span class="badge-pos">+35.5%</span></td></tr><tr><td><b>Chicco</b></td><td>220</td><td>182</td><td>111</td><td><span class="badge-pos">+32.3%</span></td></tr><tr><td><b>奇哥</b></td><td>144</td><td>124</td><td>75</td><td><span class="badge-pos">+34.0%</span></td></tr><tr><td><b>費雪</b></td><td>117</td><td>109</td><td>77</td><td><span class="badge-pos">+27.4%</span></td></tr><tr><td><b>Stokke</b></td><td>83</td><td>79</td><td>54</td><td><span class="badge-pos">+30.1%</span></td></tr><tr><td><b>美強生</b></td><td>141</td><td>108</td><td>77</td><td><span class="badge-pos">+22.0%</span></td></tr><tr><td><b>Combi</b></td><td>143</td><td>130</td><td>94</td><td><span class="badge-pos">+25.2%</span></td></tr><tr><td><b>麗嬰房</b></td><td>78</td><td>72</td><td>58</td><td><span class="badge-pos">+17.9%</span></td></tr><tr><td><b>雀巢</b></td><td>110</td><td>88</td><td>69</td><td><span class="badge-pos">+17.3%</span></td></tr>
+        </table>
+      </div>
+    </div>
+    <br>
+    <div class="insight-box">
+      <h4>&#x1F4A1; 競爭機會洞察</h4>
+      <ul>
+        <li>淨情緒最低的品牌存在大量不滿用戶 — <b>競品廣告的精準切入機會</b></li>
+        <li>高聲量但負評多的品牌 — 用戶有需求但不滿足，主打「解決痛點」廣告效果佳</li>
+        <li>低聲量高正評品牌 — 忠實粉絲基礎好，適合 KOL 擴散策略</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x26A0;&#xFE0F; 各品牌主要疑慮關鍵詞</div>
+    <div class="card">
+      <table>
+        <tr><th>品牌</th><th>主要疑慮關鍵詞（共現頻率）</th></tr>
+        <tr><td><b>好奇</b> (2,323篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">退貨(50)</span><span class="tag tag-orange" style="font-size:.8rem">投訴(47)</span><span class="tag tag-orange" style="font-size:.8rem">瑕疵(31)</span></div></td></tr><tr><td><b>貝親</b> (409篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">香料(9)</span><span class="tag tag-orange" style="font-size:.8rem">回收(8)</span><span class="tag tag-orange" style="font-size:.8rem">發霉(8)</span></div></td></tr><tr><td><b>幫寶適</b> (293篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">紅疹(12)</span><span class="tag tag-orange" style="font-size:.8rem">過期(8)</span><span class="tag tag-orange" style="font-size:.8rem">退貨(8)</span></div></td></tr><tr><td><b>樂高</b> (197篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">回收(6)</span><span class="tag tag-orange" style="font-size:.8rem">無毒(5)</span><span class="tag tag-orange" style="font-size:.8rem">過期(4)</span></div></td></tr><tr><td><b>Chicco</b> (220篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">保固(9)</span><span class="tag tag-orange" style="font-size:.8rem">退貨(8)</span><span class="tag tag-orange" style="font-size:.8rem">無毒(4)</span></div></td></tr><tr><td><b>奇哥</b> (144篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">保固(11)</span><span class="tag tag-orange" style="font-size:.8rem">退貨(6)</span><span class="tag tag-orange" style="font-size:.8rem">發霉(5)</span></div></td></tr><tr><td><b>費雪</b> (117篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">無毒(7)</span><span class="tag tag-orange" style="font-size:.8rem">發霉(5)</span><span class="tag tag-orange" style="font-size:.8rem">回收(4)</span></div></td></tr><tr><td><b>Stokke</b> (83篇)</td><td><div class='tag-cloud'><span class="tag tag-orange" style="font-size:.8rem">發霉(6)</span><span class="tag tag-orange" style="font-size:.8rem">保固(2)</span><span class="tag tag-orange" style="font-size:.8rem">瑕疵(2)</span></div></td></tr>
+      </table>
+    </div>
+    <br>
+    <div class="insight-box">
+      <h4>&#x1F4A1; 廣告素材建議</h4>
+      <ul>
+        <li><b>紅疹疑慮</b>：「低敏測試通過」針對過敏寶寶媽媽，轉換率高</li>
+        <li><b>退貨/維修</b>：強調售後保障，降低購買門檻</li>
+        <li><b>發霉/香料</b>：「天然原料認證」+成分透明化素材，建立信任</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F50D; 全體疑慮排行</div>
+    
+<div class="chart-box">
+<div class="chart-title">全平台疑慮關鍵詞 Top 12</div>
+<div id="c465828" style="height:360px"></div>
+<script>
+(function(){
+  var d={"labels": ["\u7d05\u75b9", "\u9000\u8ca8", "\u767c\u9709", "\u56de\u6536", "\u7121\u6bd2", "\u7dad\u4fee", "\u7834\u88c2", "\u6295\u8a34", "\u9999\u6599", "\u91cd\u91d1\u5c6c", "\u904e\u654f\u53cd\u61c9", "\u904e\u671f"], "values": [937, 525, 468, 441, 418, 384, 378, 365, 343, 302, 278, 277]};
+  Plotly.newPlot('c465828',
+    [{type:'bar',x:d.values,y:d.labels,orientation:'h',
+       marker:{color:'#EF4444'},text:d.values.map(String),textposition:'outside'}],
+    {margin:{l:120,r:60,t:20,b:40},height:360,
+     xaxis:{showgrid:false},yaxis:{autorange:'reversed'},
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent'},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">&#x1F4C5; 月度社群聲量趨勢</div>
+    
+<div class="chart-box">
+<div class="chart-title">近12個月每月討論量</div>
+<div id="c344572" style="height:280px"></div>
+<script>
+(function(){
+  var d={"x": ["2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"], "y": [417, 445, 384, 366, 374, 414, 430, 322, 354, 359, 416, 844]};
+  Plotly.newPlot('c344572',
+    [{type:'scatter',x:d.x,y:d.y,mode:'lines+markers',
+       line:{color:'#4F81BD',width:2},fill:'tozeroy',fillcolor:'rgba(79,129,189,0.1)'}],
+    {margin:{l:50,r:20,t:20,b:60},height:280,
+     paper_bgcolor:'transparent',plot_bgcolor:'transparent',
+     xaxis:{showgrid:false},yaxis:{showgrid:true,gridcolor:'#eee'}},
+    {responsive:true,displayModeBar:false});
+})();
+</script>
+</div>
+  </div>
+
+</div>
+<div class="footer">母嬰育兒社群口碑分析系統 trend-monitor | 2026-06-03</div>
+</body></html>
