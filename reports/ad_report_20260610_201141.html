@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>母嬰廣告洞察報告（25765 篇）</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+       background:#f0f2f5; margin:0; color:#333; }
+.topbar { background:#1565C0; color:#fff; padding:14px 28px; display:flex;
+           align-items:center; justify-content:space-between; }
+.topbar h1 { font-size:1.15rem; margin:0; font-weight:600; }
+.topbar .meta { font-size:.8rem; opacity:.8; }
+.layout { display:flex; }
+.sidebar { width:200px; flex-shrink:0; background:#fff;
+            border-right:1px solid #e0e0e0; position:sticky; top:0;
+            height:100vh; overflow-y:auto; padding:20px 0; }
+.sidebar a { display:block; padding:8px 20px; color:#555; text-decoration:none;
+              font-size:.88rem; border-left:3px solid transparent; }
+.sidebar a:hover { background:#e8f0fe; color:#1565C0; border-left-color:#1565C0; }
+.content { flex:1; padding:24px 32px; max-width:1200px; overflow-x:hidden; }
+.kpi-row { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+.kpi { background:#fff; border-radius:8px; padding:16px 20px; flex:1;
+        min-width:130px; box-shadow:0 1px 4px rgba(0,0,0,.1); text-align:center; }
+.kpi .num { font-size:2rem; font-weight:700; color:#1565C0; }
+.kpi .label { font-size:.8rem; color:#888; margin-top:4px; }
+.card-sentiment { background:#fff; border-radius:8px; padding:12px 20px;
+                   display:inline-block; margin-bottom:16px; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+section { background:#fff; border-radius:8px; padding:20px 24px;
+           margin-bottom:24px; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+section h2 { font-size:1rem; margin:0 0 16px; color:#1565C0; border-bottom:2px solid #e8f0fe;
+              padding-bottom:8px; }
+section h3 { font-size:.9rem; margin:16px 0 8px; color:#555; }
+table { border-collapse:collapse; width:100%; font-size:.85rem; }
+th,td { border:1px solid #e0e0e0; padding:7px 12px; text-align:left; vertical-align:top; }
+th { background:#f5f5f5; font-weight:600; }
+tr:nth-child(even) td { background:#fafafa; }
+.cards { display:flex; flex-wrap:wrap; gap:12px; }
+.card { background:#f8f9ff; border:1px solid #c5d2f6; border-radius:6px;
+         padding:12px 14px; width:calc(33% - 8px); min-width:200px; }
+.card-tag { font-size:.75rem; color:#1565C0; font-weight:600; margin-bottom:6px; }
+.card-hook { font-size:.88rem; font-weight:500; margin-bottom:6px; color:#333; }
+.card-src { font-size:.78rem; color:#888; font-style:italic; }
+.compliance-box { background:#FFF3E0; border:2px solid #E53935;
+                   border-radius:8px; padding:20px 24px; margin-bottom:24px; }
+.compliance-box h2 { color:#B71C1C; font-size:1rem; margin:0 0 16px; }
+.compliance-box h3 { color:#B71C1C; font-size:.9rem; margin:14px 0 8px; }
+.compliance-note { font-size:.8rem; color:#7f0000; margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <h1>📊 母嬰廣告洞察報告（25765 篇）</h1>
+  <div class="meta">生成時間：2026-06-10 20:11 UTC · 518 篇文章</div>
+</div>
+<div class="layout">
+<nav class="sidebar">
+  <a href="#kpi">總覽</a>
+  <a href="#segments">Segment 聲量</a>
+  <a href="#voc">VoC 語料庫</a>
+  <a href="#objections">異議清單</a>
+  <a href="#google">Google Ads 關鍵字</a>
+  <a href="#meta">Meta 創意角度</a>
+  <a href="#compliance">⚠ 合規警示</a>
+</nav>
+<div class="content">
+
+<!-- KPI -->
+<div id="kpi" class="kpi-row">
+  <div class="kpi"><div class="num">91</div><div class="label">有效 Segments</div></div>
+  <div class="kpi"><div class="num">219</div><div class="label">VoC 語料</div></div>
+  <div class="kpi"><div class="num">7</div><div class="label">異議主題</div></div>
+  <div class="kpi"><div class="num">88</div><div class="label">關鍵字資產</div></div>
+  <div class="kpi"><div class="num">50</div><div class="label">影響力帳號</div></div>
+</div>
+<div class="card-sentiment">
+  整體情緒均值：<strong style="color:#4CAF50">+0.3456</strong>
+  &nbsp;→&nbsp;<strong style="color:#4CAF50">正面</strong>
+</div>
+
+<!-- Segment chart -->
+<section id="segments">
+<h2>Segment 聲量分佈</h2>
+<div id="chartSegment"></div>
+<script>Plotly.newPlot("chartSegment",[{"type": "bar", "x": [60, 30, 23, 20, 19, 19, 18, 17, 17, 15, 14, 13, 11, 11, 11, 11, 10, 8, 8, 7], "y": ["通用 / 推車", "孕晚期 / 托嬰", "學齡前3-6Y / 保母", "幼兒1-3Y / 嬰兒床", "通用 / 揹巾", "副食品4-12M / 汽座", "孕晚期 / 副食品", "學齡前3-6Y / 汽座", "新生兒0-3M / 搖籃", "副食品4-12M / 推車", "學齡前3-6Y / 尿布", "副食品4-12M / 嬰兒床", "通用 / 安全座椅", "通用 / 背巾", "通用 / 吸乳器", "孕早期 / 益生菌", "孕中期 / 月子中心", "備孕 / 益生菌", "副食品4-12M / 揹巾", "幼兒1-3Y / 親子課程"], "orientation": "h", "marker": {"color": ["#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50"]}, "text": ["sentiment=0.368", "sentiment=0.342", "sentiment=0.155", "sentiment=0.231", "sentiment=0.330", "sentiment=0.401", "sentiment=0.410", "sentiment=0.168", "sentiment=0.390", "sentiment=0.479", "sentiment=0.407", "sentiment=0.325", "sentiment=0.460", "sentiment=0.405", "sentiment=0.315", "sentiment=0.340", "sentiment=0.164", "sentiment=0.376", "sentiment=0.368", "sentiment=0.343"], "hovertemplate": "%{y}<br>聲量: %{x}<br>%{text}<extra></extra>"}],{"title": {"text": "Segment 聲量分佈（Top 20，按情緒色彩）", "font": {"size": 14}}, "height": 640, "margin": {"l": 180, "r": 60, "t": 50, "b": 40}, "xaxis": {"title": "篇數"}, "yaxis": {"autorange": "reversed"}, "plot_bgcolor": "#fafafa", "paper_bgcolor": "#fff"});</script>
+</section>
+
+<!-- VoC -->
+<section id="voc">
+<h2>VoC 語料庫（Voice of Customer）</h2>
+<p style="font-size:.82rem;color:#888;margin:0 0 12px">
+  痛點＝用戶困擾 ／ 推薦＝正向分享 ／ 嚮往＝期待語氣 ／ 比較＝品牌/產品對比 ／ 疑慮＝安全/品質顧慮
+</p>
+<table>
+<thead><tr><th style="width:50%">語料（節錄）</th><th>情緒</th><th>頻率</th><th>生命階段</th></tr></thead>
+<tbody><tr><td colspan="4" style="background:#FFEBEE;font-weight:600;padding:6px 12px">痛點（51 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">擔心孩子的安全與情緒發展怎麼辦？</td><td style="color:#757575">-0.034</td><td>596</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">育兒崩潰、身心俱疲，真的沒辦法了。</td><td style="color:#757575">-0.034</td><td>511</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">手足爭寵或情緒爆發，父母該如何應對？</td><td style="color:#388E3C">+0.141</td><td>479</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">孩子發展遲緩或學業表現不理想該如何輔導？</td><td style="color:#388E3C">+0.141</td><td>479</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">我的付出，是否值得被認同和肯定？</td><td style="color:#757575">-0.034</td><td>426</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">嬰兒鼻塞、慢性呼吸道困擾怎麼辦？</td><td style="color:#388E3C">+0.141</td><td>359</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">長輩過度干預或夫妻育兒觀點衝突怎麼辦？</td><td style="color:#388E3C">+0.141</td><td>359</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">育兒壓力大到情緒崩潰，我該如何自我療癒？</td><td style="color:#388E3C">+0.141</td><td>359</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">半夜睡不著、身心俱疲，該如何自救？</td><td style="color:#757575">-0.034</td><td>341</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">傍晚「黏人精」怎麼辦？身心俱疲的育兒困境。</td><td style="color:#388E3C">+0.132</td><td>329</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">寶寶放不下、哭泣高峰期該如何應對？</td><td style="color:#388E3C">+0.132</td><td>329</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">呼吸道不適、流鼻水怎麼辦？新手爸媽必看。</td><td style="color:#388E3C">+0.132</td><td>329</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">外出帶寶寶太累？從打包到交通的育兒大工程。</td><td style="color:#388E3C">+0.132</td><td>329</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">寶寶瘦、吃不飽？營養師教你提升食慾！</td><td style="color:#388E3C">+0.132</td><td>329</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">孩子總是不說真話，該如何引導？</td><td style="color:#757575">-0.034</td><td>256</td><td>通用</td></tr>
+<tr><td colspan="4" style="background:#E8F5E9;font-weight:600;padding:6px 12px">推薦（35 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">✨ 百位媽咪真心分享：開箱、心得與實用育兒好物。</td><td style="color:#388E3C">+0.376</td><td>741</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">👩‍⚕️ 醫師/專家親授：從衛教到生活小撇步。</td><td style="color:#388E3C">+0.376</td><td>556</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">👶 產品選擇必看：從科學實證到父母安心感。</td><td style="color:#388E3C">+0.376</td><td>445</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">媽媽美力養成：從頭皮到唇，全方位保養指南。</td><td style="color:#388E3C">+0.460</td><td>324</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">卸妝洗臉怎麼選？新手媽咪必看清潔攻略。</td><td style="color:#388E3C">+0.460</td><td>324</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">冬季肌膚乾燥？用美容油給它最暖的呵護。</td><td style="color:#388E3C">+0.460</td><td>324</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">防曬不只抗UV！輕盈養膚才是新趨勢。</td><td style="color:#388E3C">+0.460</td><td>324</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">季節更迭，底妝怎麼搭？找到適合全年的完美粉底。</td><td style="color:#388E3C">+0.460</td><td>324</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">🚨 新手爸媽必學！高風險點與急診醫師衛教。</td><td style="color:#388E3C">+0.376</td><td>297</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">💪 除了營養，別忘了照顧好寶寶的腸胃和居家安全。</td><td style="color:#388E3C">+0.376</td><td>297</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">🍎 不只餵奶：完整的三餐食譜與副食品搭配指南。</td><td style="color:#388E3C">+0.376</td><td>222</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">怕準備太麻煩？要超方便的常溫副食品！</td><td style="color:#388E3C">+0.152</td><td>88</td><td>副食品4-12M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">想找安全、好吃，適合宝宝的辅食品牌？</td><td style="color:#388E3C">+0.152</td><td>88</td><td>副食品4-12M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">如何为宝宝建立健康的肠道和免疫力？</td><td style="color:#388E3C">+0.152</td><td>88</td><td>副食品4-12M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">辅食新手求助：哪种牌子最靠谱、最適合？</td><td style="color:#388E3C">+0.152</td><td>88</td><td>副食品4-12M</td></tr>
+<tr><td colspan="4" style="background:#E3F2FD;font-weight:600;padding:6px 12px">嚮往（51 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">想找回的不是時間，是「更好的自己」。</td><td style="color:#388E3C">+0.334</td><td>2662</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">想知道我們吵鬧又真實的育兒日常嗎？</td><td style="color:#388E3C">+0.226</td><td>935</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">孩子需要的，是希望和支持，而不是壓力。</td><td style="color:#388E3C">+0.226</td><td>935</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">想擁有像朋友一樣的、放鬆又真實的媽媽時光。</td><td style="color:#388E3C">+0.226</td><td>935</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">從焦慮到自信：打造屬於你們的理想親子生活。</td><td style="color:#388E3C">+0.226</td><td>935</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">不只是完美，更要學會支持自己和家庭的成長。</td><td style="color:#388E3C">+0.226</td><td>935</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">別再用比較來定義「好父母」，做最真實的自己。</td><td style="color:#388E3C">+0.226</td><td>935</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">旅行必備：輕巧高效，隨時打造完美髮型。</td><td style="color:#388E3C">+0.327</td><td>364</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">孩子最需要的不是禮物，是專心陪伴。</td><td style="color:#388E3C">+0.334</td><td>323</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">每個育兒階段都有指南，讓你不再迷茫。</td><td style="color:#388E3C">+0.334</td><td>299</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">解除疑問！用科學知識，快樂度過孕期。</td><td style="color:#388E3C">+0.370</td><td>263</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">憧憬自然的誕生！想知道最適合我的生產場景？</td><td style="color:#388E3C">+0.370</td><td>263</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">新手媽咪必看！從餵奶到術後，全方位實用指南。</td><td style="color:#388E3C">+0.370</td><td>263</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">想知道「被好好照顧」是怎樣的體驗嗎？</td><td style="color:#388E3C">+0.370</td><td>263</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">孕期準備不只是生孩子，更是愛與成長的過程。</td><td style="color:#388E3C">+0.370</td><td>263</td><td>孕晚期</td></tr>
+<tr><td colspan="4" style="background:#F3E5F5;font-weight:600;padding:6px 12px">比較（50 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">停止用「比較」傷害孩子。</td><td style="color:#388E3C">+0.203</td><td>486</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">真正的愛，從不以比較為前提。</td><td style="color:#388E3C">+0.203</td><td>486</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">心靈富足，比物質更重要。</td><td style="color:#388E3C">+0.203</td><td>486</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">每個人的辛苦，無法被比較。</td><td style="color:#388E3C">+0.203</td><td>486</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">尊重差異，才是最好的教育。</td><td style="color:#388E3C">+0.203</td><td>486</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">別讓「完美」成為孩子的枷鎖。</td><td style="color:#388E3C">+0.203</td><td>486</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">育兒現實太殘酷，哪個才是真媽媽？</td><td style="color:#388E3C">+0.212</td><td>461</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">比起完美，擁有更好的自己更重要。</td><td style="color:#388E3C">+0.212</td><td>461</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">太多選擇讓新手爸媽焦慮，該怎麼選？</td><td style="color:#388E3C">+0.212</td><td>461</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">孩子的心思，總能說出最真實的話。</td><td style="color:#388E3C">+0.212</td><td>461</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">育兒太累了，尋找「比較輕鬆」的秘訣。</td><td style="color:#388E3C">+0.212</td><td>461</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">自然產 vs 剖腹產，優缺點該怎麼選擇？</td><td style="color:#388E3C">+0.288</td><td>311</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">母嬰親善醫院怎麼選？流程優缺點一次看。</td><td style="color:#388E3C">+0.288</td><td>234</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">除了身體恢復，孕期情緒變化也該留意。</td><td style="color:#388E3C">+0.288</td><td>234</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">寶寶腸胃敏感或容易過敏，該如何選擇產品？</td><td style="color:#757575">+0.008</td><td>221</td><td>副食品4-12M</td></tr>
+<tr><td colspan="4" style="background:#FFF8E1;font-weight:600;padding:6px 12px">疑慮（32 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">如何判斷產品是否真正「無毒」且低敏感？</td><td style="color:#388E3C">+0.447</td><td>309</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">空瓶回收不只環保，還能成為育兒教育的一部分。</td><td style="color:#388E3C">+0.447</td><td>180</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">剩食、水果發霉，到底能不能再吃？</td><td style="color:#388E3C">+0.447</td><td>129</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">哪些護理成分才是最科學、最適合寶寶的？</td><td style="color:#388E3C">+0.447</td><td>103</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">純淨香氣和成分，讓媽媽也無法抗拒。</td><td style="color:#388E3C">+0.447</td><td>103</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">從餐食到護理，如何選擇最安心的「全方位」方案？</td><td style="color:#388E3C">+0.447</td><td>51</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">溫和配方：避開酒精、香精與刺激物。</td><td style="color:#388E3C">+0.484</td><td>50</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">成分越單純，肌膚反而更健康。</td><td style="color:#388E3C">+0.484</td><td>34</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">寶寶臉部或身體的紅疹怎麼辦？</td><td style="color:#388E3C">+0.329</td><td>31</td><td>副食品4-12M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">保養重點：讓肌膚屏障保持穩定健康。</td><td style="color:#388E3C">+0.484</td><td>27</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">重金屬超標、副食品是否安全？</td><td style="color:#388E3C">+0.329</td><td>25</td><td>副食品4-12M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">全方位防護：修飾瑕疵與抵禦紫外線。</td><td style="color:#388E3C">+0.484</td><td>20</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">輕盈水潤感，無負擔、不悶熱的膚觸。</td><td style="color:#388E3C">+0.484</td><td>17</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">如何判斷副食品的真實安全？</td><td style="color:#388E3C">+0.329</td><td>12</td><td>副食品4-12M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">發霉或不乾淨的食物該怎麼辦？</td><td style="color:#388E3C">+0.329</td><td>12</td><td>副食品4-12M</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- Objections -->
+<section id="objections">
+<h2>異議清單</h2>
+<div id="chartObj"></div>
+<script>Plotly.newPlot("chartObj",[{"type": "bar", "x": ["退換貨", "安全成分", "品牌信任", "業配疑慮", "價格CP", "過敏", "通路水貨"], "y": [0.6135, 0.5986, 0.5928, 0.5882, 0.5658, 0.5073, 0.4444], "marker": {"color": "#E53935"}, "text": ["5 篇", "1005 篇", "2513 篇", "17 篇", "185 篇", "104 篇", "9 篇"], "textposition": "outside", "hovertemplate": "%{x}<br>嚴重度: %{y:.4f}<br>%{text}<extra></extra>"}],{"title": {"text": "異議清單 — 嚴重度", "font": {"size": 14}}, "height": 320, "margin": {"l": 60, "r": 30, "t": 50, "b": 80}, "yaxis": {"title": "嚴重度 (abs pn_score)"}, "plot_bgcolor": "#fafafa", "paper_bgcolor": "#fff"});</script>
+</section>
+
+<!-- Google -->
+<section id="google">
+<h2>Google Ads — 關鍵字群組</h2>
+<div id="chartKw"></div>
+<script>Plotly.newPlot("chartKw",[{"type": "bar", "x": [9936, 7675, 6710, 6262, 5890, 5638, 4871, 4812, 4422, 3982, 3793, 3565, 3563, 3535, 3412, 3065, 3049, 2915, 2633, 2389, 2359, 2288, 2269, 2209, 2105, 2079, 1794, 1650, 1602, 1572, 1453, 1240, 1240, 1213, 1203, 1042, 929, 876, 860, 766], "y": ["保母", "托嬰", "尿布", "推車", "玩具", "幼兒園", "過敏", "疫苗", "親餵", "奶嘴", "母乳", "副食品", "安撫", "發燒", "奶粉", "奶瓶", "月嫂", "汽座", "說話", "哺乳", "嬰兒床", "托育", "配方奶", "托嬰中心", "月子中心", "好奇", "益生菌", "提籃", "公托", "監視器", "哄睡", "睡過夜", "翻身", "瓶餵", "脹氣", "夜奶", "揹巾", "包巾", "湯匙", "積木"], "orientation": "h", "marker": {"color": ["#1976D2", "#1976D2", "#1976D2", "#1976D2", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#1976D2", "#388E3C", "#388E3C", "#1976D2", "#1976D2", "#1976D2", "#1976D2", "#388E3C", "#388E3C", "#1976D2", "#1976D2", "#1976D2", "#388E3C", "#1976D2", "#388E3C", "#1976D2", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#1976D2", "#388E3C", "#388E3C", "#388E3C"]}, "text": ["交易型", "交易型", "交易型", "交易型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "交易型", "資訊型", "資訊型", "交易型", "交易型", "交易型", "交易型", "資訊型", "資訊型", "交易型", "交易型", "交易型", "資訊型", "交易型", "資訊型", "交易型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "交易型", "資訊型", "資訊型", "資訊型"], "hovertemplate": "%{y}<br>頻率: %{x}<br>意圖: %{text}<extra></extra>"}],{"title": {"text": "關鍵字資產（藍=交易型 紫=比較型 綠=資訊型）", "font": {"size": 14}}, "height": 960, "margin": {"l": 130, "r": 60, "t": 50, "b": 40}, "xaxis": {"title": "出現頻率"}, "yaxis": {"autorange": "reversed"}, "plot_bgcolor": "#fafafa", "paper_bgcolor": "#fff"});</script>
+<h3 style="margin-top:20px">完整關鍵字群組</h3>
+<table>
+<thead><tr><th>生命階段</th><th>產品類別</th><th>聲量</th><th>核心關鍵字</th><th>排除字</th></tr></thead>
+<tbody><tr><td>通用</td><td>推車</td><td>60</td><td style="font-size:.85em">通用、推車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕晚期</td><td>托嬰</td><td>30</td><td style="font-size:.85em">孕晚期、托嬰</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>保母</td><td>23</td><td style="font-size:.85em">學齡前3-6Y、保母</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>嬰兒床</td><td>20</td><td style="font-size:.85em">幼兒1-3Y、嬰兒床</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>揹巾</td><td>19</td><td style="font-size:.85em">通用、揹巾</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>汽座</td><td>19</td><td style="font-size:.85em">副食品4-12M、汽座</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕晚期</td><td>副食品</td><td>18</td><td style="font-size:.85em">孕晚期、副食品</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>汽座</td><td>17</td><td style="font-size:.85em">學齡前3-6Y、汽座</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>新生兒0-3M</td><td>搖籃</td><td>17</td><td style="font-size:.85em">新生兒0-3M、搖籃</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>推車</td><td>15</td><td style="font-size:.85em">副食品4-12M、推車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>尿布</td><td>14</td><td style="font-size:.85em">學齡前3-6Y、尿布</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>嬰兒床</td><td>13</td><td style="font-size:.85em">副食品4-12M、嬰兒床</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>安全座椅</td><td>11</td><td style="font-size:.85em">通用、安全座椅</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>背巾</td><td>11</td><td style="font-size:.85em">通用、背巾</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>吸乳器</td><td>11</td><td style="font-size:.85em">通用、吸乳器</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕早期</td><td>益生菌</td><td>11</td><td style="font-size:.85em">孕早期、益生菌</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕中期</td><td>月子中心</td><td>10</td><td style="font-size:.85em">孕中期、月子中心</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>備孕</td><td>益生菌</td><td>8</td><td style="font-size:.85em">備孕、益生菌</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>揹巾</td><td>8</td><td style="font-size:.85em">副食品4-12M、揹巾</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>親子課程</td><td>7</td><td style="font-size:.85em">幼兒1-3Y、親子課程</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>嬰兒車</td><td>7</td><td style="font-size:.85em">幼兒1-3Y、嬰兒車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>月嫂</td><td>7</td><td style="font-size:.85em">通用、月嫂</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕晚期</td><td>汽座</td><td>7</td><td style="font-size:.85em">孕晚期、汽座</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕早期</td><td>月子中心</td><td>6</td><td style="font-size:.85em">孕早期、月子中心</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>搖籃</td><td>6</td><td style="font-size:.85em">幼兒1-3Y、搖籃</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>月子中心</td><td>6</td><td style="font-size:.85em">幼兒1-3Y、月子中心</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕中期</td><td>托嬰</td><td>6</td><td style="font-size:.85em">孕中期、托嬰</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕期</td><td>托育</td><td>5</td><td style="font-size:.85em">孕期、托育</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>嬰兒車</td><td>5</td><td style="font-size:.85em">通用、嬰兒車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>奶粉</td><td>5</td><td style="font-size:.85em">學齡前3-6Y、奶粉</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- Meta -->
+<section id="meta">
+<h2>Meta Ads — 創意角度</h2>
+<div class="cards">
+<div class="card">
+  <div class="card-tag">通用 · 罪惡感緩解</div>
+  <div class="card-hook">擔心孩子的安全與情緒發展怎麼辦？</div>
+  <div class="card-src">擔心孩子的安全與情緒發展怎麼辦？</div>
+</div><div class="card">
+  <div class="card-tag">幼兒1-3Y · 罪惡感緩解</div>
+  <div class="card-hook">手足爭寵或情緒爆發，父母該如何應對？</div>
+  <div class="card-src">手足爭寵或情緒爆發，父母該如何應對？</div>
+</div><div class="card">
+  <div class="card-tag">新生兒0-3M · 罪惡感緩解</div>
+  <div class="card-hook">傍晚「黏人精」怎麼辦？身心俱疲的育兒困境。</div>
+  <div class="card-src">傍晚「黏人精」怎麼辦？身心俱疲的育兒困境。</div>
+</div><div class="card">
+  <div class="card-tag">孕晚期 · 罪惡感緩解</div>
+  <div class="card-hook">產後乳房脹痛、如何有效追奶？</div>
+  <div class="card-src">產後乳房脹痛、如何有效追奶？</div>
+</div><div class="card">
+  <div class="card-tag">副食品4-12M · 罪惡感緩解</div>
+  <div class="card-hook">寶寶便秘脹氣，怎麼讓腸胃舒服？</div>
+  <div class="card-src">寶寶便秘脹氣，怎麼讓腸胃舒服？</div>
+</div><div class="card">
+  <div class="card-tag">孕中期 · 罪惡感緩解</div>
+  <div class="card-hook">擔心妊娠合併症或慢性病，我該怎麼辦？</div>
+  <div class="card-src">擔心妊娠合併症或慢性病，我該怎麼辦？</div>
+</div><div class="card">
+  <div class="card-tag">孕產保養 · 罪惡感緩解</div>
+  <div class="card-hook">換季敏感、肌膚乾燥脫屑，該怎麼辦？</div>
+  <div class="card-src">換季敏感、肌膚乾燥脫屑，該怎麼辦？</div>
+</div><div class="card">
+  <div class="card-tag">學齡前3-6Y · 罪惡感緩解</div>
+  <div class="card-hook">擔心學齡前教育路，該如何選擇？</div>
+  <div class="card-src">擔心學齡前教育路，該如何選擇？</div>
+</div><div class="card">
+  <div class="card-tag">備孕 · 罪惡感緩解</div>
+  <div class="card-hook">備孕多年，總是空空如也很心煩。</div>
+  <div class="card-src">備孕多年，總是空空如也很心煩。</div>
+</div><div class="card">
+  <div class="card-tag">孕早期 · 罪惡感緩解</div>
+  <div class="card-hook">孕吐嘔酸、出血？初懷的生理痛點怎麼辦？</div>
+  <div class="card-src">孕吐嘔酸、出血？初懷的生理痛點怎麼辦？</div>
+</div><div class="card">
+  <div class="card-tag">新生兒0-3M · 過來人信任</div>
+  <div class="card-hook">✨ 百位媽咪真心分享：開箱、心得與實用育兒好物。</div>
+  <div class="card-src">✨ 百位媽咪真心分享：開箱、心得與實用育兒好物。</div>
+</div><div class="card">
+  <div class="card-tag">孕產保養 · 過來人信任</div>
+  <div class="card-hook">媽媽美力養成：從頭皮到唇，全方位保養指南。</div>
+  <div class="card-src">媽媽美力養成：從頭皮到唇，全方位保養指南。</div>
+</div><div class="card">
+  <div class="card-tag">副食品4-12M · 過來人信任</div>
+  <div class="card-hook">怕準備太麻煩？要超方便的常溫副食品！</div>
+  <div class="card-src">怕準備太麻煩？要超方便的常溫副食品！</div>
+</div><div class="card">
+  <div class="card-tag">學齡前3-6Y · 過來人信任</div>
+  <div class="card-hook">挑幼稚園實在太難！該如何選擇最適合的環境？</div>
+  <div class="card-src">挑幼稚園實在太難！該如何選擇最適合的環境？</div>
+</div><div class="card">
+  <div class="card-tag">孕中期 · 過來人信任</div>
+  <div class="card-hook">🤰🏻新手媽咪：孕期必備護理知識都在這。</div>
+  <div class="card-src">🤰🏻新手媽咪：孕期必備護理知識都在這。</div>
+</div><div class="card">
+  <div class="card-tag">備孕 · 過來人信任</div>
+  <div class="card-hook">備孕受挫、遲遲未懷，該如何尋求專業解答？</div>
+  <div class="card-src">備孕受挫、遲遲未懷，該如何尋求專業解答？</div>
+</div><div class="card">
+  <div class="card-tag">孕早期 · 過來人信任</div>
+  <div class="card-hook">想知道哪家產檢院和醫生最適合我？</div>
+  <div class="card-src">想知道哪家產檢院和醫生最適合我？</div>
+</div><div class="card">
+  <div class="card-tag">通用 · 好奇心</div>
+  <div class="card-hook">想找回的不是時間，是「更好的自己」。</div>
+  <div class="card-src">想找回的不是時間，是「更好的自己」。</div>
+</div><div class="card">
+  <div class="card-tag">幼兒1-3Y · 好奇心</div>
+  <div class="card-hook">想知道我們吵鬧又真實的育兒日常嗎？</div>
+  <div class="card-src">想知道我們吵鬧又真實的育兒日常嗎？</div>
+</div><div class="card">
+  <div class="card-tag">孕產保養 · 好奇心</div>
+  <div class="card-hook">旅行必備：輕巧高效，隨時打造完美髮型。</div>
+  <div class="card-src">旅行必備：輕巧高效，隨時打造完美髮型。</div>
+</div><div class="card">
+  <div class="card-tag">孕晚期 · 好奇心</div>
+  <div class="card-hook">解除疑問！用科學知識，快樂度過孕期。</div>
+  <div class="card-src">解除疑問！用科學知識，快樂度過孕期。</div>
+</div><div class="card">
+  <div class="card-tag">副食品4-12M · 好奇心</div>
+  <div class="card-hook">孩子想互動玩耍，大人能否真正懂？</div>
+  <div class="card-src">孩子想互動玩耍，大人能否真正懂？</div>
+</div><div class="card">
+  <div class="card-tag">學齡前3-6Y · 好奇心</div>
+  <div class="card-hook">教學理念太多，該如何選擇最合適的？</div>
+  <div class="card-src">教學理念太多，該如何選擇最合適的？</div>
+</div><div class="card">
+  <div class="card-tag">孕期 · 好奇心</div>
+  <div class="card-hook">跨越醫療極限，為生命點燃生育的希望與奇蹟。</div>
+  <div class="card-src">跨越醫療極限，為生命點燃生育的希望與奇蹟。</div>
+</div><div class="card">
+  <div class="card-tag">備孕 · 好奇心</div>
+  <div class="card-hook">真的好想要一個小生命，期待當媽媽。</div>
+  <div class="card-src">真的好想要一個小生命，期待當媽媽。</div>
+</div><div class="card">
+  <div class="card-tag">孕中期 · 好奇心</div>
+  <div class="card-hook">擔心寶寶胎動？想知道在家怎麼了解狀況嗎？</div>
+  <div class="card-src">擔心寶寶胎動？想知道在家怎麼了解狀況嗎？</div>
+</div><div class="card">
+  <div class="card-tag">孕早期 · 好奇心</div>
+  <div class="card-hook">孕吐到想哭？我們懂你的煎熬與不適。</div>
+  <div class="card-src">孕吐到想哭？我們懂你的煎熬與不適。</div>
+</div><div class="card">
+  <div class="card-tag">幼兒1-3Y · 理性信任</div>
+  <div class="card-hook">停止用「比較」傷害孩子。</div>
+  <div class="card-src">停止用「比較」傷害孩子。</div>
+</div><div class="card">
+  <div class="card-tag">通用 · 理性信任</div>
+  <div class="card-hook">育兒現實太殘酷，哪個才是真媽媽？</div>
+  <div class="card-src">育兒現實太殘酷，哪個才是真媽媽？</div>
+</div><div class="card">
+  <div class="card-tag">孕晚期 · 理性信任</div>
+  <div class="card-hook">自然產 vs 剖腹產，優缺點該怎麼選擇？</div>
+  <div class="card-src">自然產 vs 剖腹產，優缺點該怎麼選擇？</div>
+</div>
+</div>
+</section>
+
+<!-- Compliance -->
+<div class="compliance-box">
+<h2>⚠ 合規警示 — 需法務確認，不可直接投放</h2>
+<table>
+<thead><tr><th>風險類型</th><th>篇數</th><th>範例標題</th></tr></thead>
+<tbody><tr><td><strong>醫療效能</strong></td><td>740</td><td style="font-size:.85em">自費產檢有必要嗎？婦產科醫師推薦這三項一定要做！<br>懷孕超初期常見10徵兆&amp;症狀，媽媽經驗談及醫師建議<br>為什麼婦產科醫師建議孕婦睡覺時要左側躺？</td></tr>
+<tr><td><strong>療效宣稱</strong></td><td>1511</td><td style="font-size:.85em">產前產後都可能憂鬱症 媽媽別害怕有這2種治療方法<br>子宮外孕如何確診？及早發現可用藥物治療<br>胎內治療　幫助挽救胎兒生命</td></tr>
+<tr><td><strong>配方奶廣告限制</strong></td><td>213</td><td style="font-size:.85em">在婆家坐月子!不如去月子中心坐月子之我的月子中心分享2020-12-23 16:<br>寶寶要轉配方奶了，可以銜接母乳配方建議？2021-10-13 12:22:51孕<br>求救，母乳很少2016-5-21 22:34:25孕哺大小事6592</td></tr>
+</tbody>
+</table>
+<h3>受限 Segments</h3>
+<ul><li>通用 × 通用（11504 篇）</li><li>幼兒1-3Y × 通用（3005 篇）</li><li>新生兒0-3M × 通用（1232 篇）</li><li>孕晚期 × 通用（1080 篇）</li><li>新生兒0-3M × 推車（462 篇）</li><li>孕中期 × 通用（398 篇）</li><li>備孕 × 通用（374 篇）</li><li>學齡前3-6Y × 通用（371 篇）</li><li>孕產保養 × 通用（364 篇）</li><li>副食品4-12M × 通用（363 篇）</li><li>新生兒0-3M × 奶粉（314 篇）</li><li>新生兒0-3M × 尿布（288 篇）</li><li>副食品4-12M × 副食品（275 篇）</li><li>孕晚期 × 月子中心（266 篇）</li><li>幼兒1-3Y × 托嬰（259 篇）</li><li>通用 × 尿布（255 篇）</li><li>新生兒0-3M × 嬰兒床（252 篇）</li><li>新生兒0-3M × 奶瓶（228 篇）</li><li>新生兒0-3M × 配方奶（217 篇）</li><li>幼兒1-3Y × 尿布（208 篇）</li><li>…等共 102 個 Segment</li></ul>
+<p class="compliance-note">以上素材已與一般素材隔離。投放前請與法務確認是否符合《嬰兒及較大嬰兒配方食品廣告及促銷管理辦法》及相關醫療廣告規定。</p>
+</div>
+
+</div><!-- /content -->
+</div><!-- /layout -->
+</body>
+</html>
