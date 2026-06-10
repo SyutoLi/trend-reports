@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>母嬰廣告洞察報告（25765 篇）</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+       background:#f0f2f5; margin:0; color:#333; }
+.topbar { background:#1565C0; color:#fff; padding:14px 28px; display:flex;
+           align-items:center; justify-content:space-between; }
+.topbar h1 { font-size:1.15rem; margin:0; font-weight:600; }
+.topbar .meta { font-size:.8rem; opacity:.8; }
+.layout { display:flex; }
+.sidebar { width:200px; flex-shrink:0; background:#fff;
+            border-right:1px solid #e0e0e0; position:sticky; top:0;
+            height:100vh; overflow-y:auto; padding:20px 0; }
+.sidebar a { display:block; padding:8px 20px; color:#555; text-decoration:none;
+              font-size:.88rem; border-left:3px solid transparent; }
+.sidebar a:hover { background:#e8f0fe; color:#1565C0; border-left-color:#1565C0; }
+.content { flex:1; padding:24px 32px; max-width:1200px; overflow-x:hidden; }
+.kpi-row { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+.kpi { background:#fff; border-radius:8px; padding:16px 20px; flex:1;
+        min-width:130px; box-shadow:0 1px 4px rgba(0,0,0,.1); text-align:center; }
+.kpi .num { font-size:2rem; font-weight:700; color:#1565C0; }
+.kpi .label { font-size:.8rem; color:#888; margin-top:4px; }
+.card-sentiment { background:#fff; border-radius:8px; padding:12px 20px;
+                   display:inline-block; margin-bottom:16px; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+section { background:#fff; border-radius:8px; padding:20px 24px;
+           margin-bottom:24px; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+section h2 { font-size:1rem; margin:0 0 16px; color:#1565C0; border-bottom:2px solid #e8f0fe;
+              padding-bottom:8px; }
+section h3 { font-size:.9rem; margin:16px 0 8px; color:#555; }
+table { border-collapse:collapse; width:100%; font-size:.85rem; }
+th,td { border:1px solid #e0e0e0; padding:7px 12px; text-align:left; vertical-align:top; }
+th { background:#f5f5f5; font-weight:600; }
+tr:nth-child(even) td { background:#fafafa; }
+.cards { display:flex; flex-wrap:wrap; gap:12px; }
+.card { background:#f8f9ff; border:1px solid #c5d2f6; border-radius:6px;
+         padding:12px 14px; width:calc(33% - 8px); min-width:200px; }
+.card-tag { font-size:.75rem; color:#1565C0; font-weight:600; margin-bottom:6px; }
+.card-hook { font-size:.88rem; font-weight:500; margin-bottom:6px; color:#333; }
+.card-src { font-size:.78rem; color:#888; font-style:italic; }
+.compliance-box { background:#FFF3E0; border:2px solid #E53935;
+                   border-radius:8px; padding:20px 24px; margin-bottom:24px; }
+.compliance-box h2 { color:#B71C1C; font-size:1rem; margin:0 0 16px; }
+.compliance-box h3 { color:#B71C1C; font-size:.9rem; margin:14px 0 8px; }
+.compliance-note { font-size:.8rem; color:#7f0000; margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <h1>📊 母嬰廣告洞察報告（25765 篇）</h1>
+  <div class="meta">生成時間：2026-06-10 12:36 UTC · 518 篇文章</div>
+</div>
+<div class="layout">
+<nav class="sidebar">
+  <a href="#kpi">總覽</a>
+  <a href="#segments">Segment 聲量</a>
+  <a href="#voc">VoC 語料庫</a>
+  <a href="#objections">異議清單</a>
+  <a href="#google">Google Ads 關鍵字</a>
+  <a href="#meta">Meta 創意角度</a>
+  <a href="#compliance">⚠ 合規警示</a>
+</nav>
+<div class="content">
+
+<!-- KPI -->
+<div id="kpi" class="kpi-row">
+  <div class="kpi"><div class="num">91</div><div class="label">有效 Segments</div></div>
+  <div class="kpi"><div class="num">34918</div><div class="label">VoC 語料</div></div>
+  <div class="kpi"><div class="num">6</div><div class="label">異議主題</div></div>
+  <div class="kpi"><div class="num">88</div><div class="label">關鍵字資產</div></div>
+  <div class="kpi"><div class="num">50</div><div class="label">影響力帳號</div></div>
+</div>
+<div class="card-sentiment">
+  整體情緒均值：<strong style="color:#4CAF50">+0.3057</strong>
+  &nbsp;→&nbsp;<strong style="color:#4CAF50">正面</strong>
+</div>
+
+<!-- Segment chart -->
+<section id="segments">
+<h2>Segment 聲量分佈</h2>
+<div id="chartSegment"></div>
+<script>Plotly.newPlot("chartSegment",[{"type": "bar", "x": [60, 30, 23, 20, 19, 19, 18, 17, 17, 15, 14, 13, 11, 11, 11, 11, 10, 8, 8, 7], "y": ["通用 / 推車", "孕晚期 / 托嬰", "學齡前3-6Y / 保母", "幼兒1-3Y / 嬰兒床", "通用 / 揹巾", "副食品4-12M / 汽座", "孕晚期 / 副食品", "學齡前3-6Y / 汽座", "新生兒0-3M / 搖籃", "副食品4-12M / 推車", "學齡前3-6Y / 尿布", "副食品4-12M / 嬰兒床", "通用 / 安全座椅", "通用 / 背巾", "通用 / 吸乳器", "孕早期 / 益生菌", "孕中期 / 月子中心", "備孕 / 益生菌", "副食品4-12M / 揹巾", "幼兒1-3Y / 親子課程"], "orientation": "h", "marker": {"color": ["#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50", "#4CAF50"]}, "text": ["sentiment=0.363", "sentiment=0.339", "sentiment=0.263", "sentiment=0.231", "sentiment=0.403", "sentiment=0.401", "sentiment=0.154", "sentiment=0.159", "sentiment=0.249", "sentiment=0.479", "sentiment=0.407", "sentiment=0.325", "sentiment=0.405", "sentiment=0.405", "sentiment=0.260", "sentiment=0.340", "sentiment=0.164", "sentiment=0.213", "sentiment=0.368", "sentiment=0.458"], "hovertemplate": "%{y}<br>聲量: %{x}<br>%{text}<extra></extra>"}],{"title": {"text": "Segment 聲量分佈（Top 20，按情緒色彩）", "font": {"size": 14}}, "height": 640, "margin": {"l": 180, "r": 60, "t": 50, "b": 40}, "xaxis": {"title": "篇數"}, "yaxis": {"autorange": "reversed"}, "plot_bgcolor": "#fafafa", "paper_bgcolor": "#fff"});</script>
+</section>
+
+<!-- VoC -->
+<section id="voc">
+<h2>VoC 語料庫（Voice of Customer）</h2>
+<p style="font-size:.82rem;color:#888;margin:0 0 12px">
+  痛點＝用戶困擾 ／ 推薦＝正向分享 ／ 嚮往＝期待語氣 ／ 比較＝品牌/產品對比 ／ 疑慮＝安全/品質顧慮
+</p>
+<table>
+<thead><tr><th style="width:50%">語料（節錄）</th><th>情緒</th><th>頻率</th><th>生命階段</th></tr></thead>
+<tbody><tr><td colspan="4" style="background:#FFEBEE;font-weight:600;padding:6px 12px">痛點（5346 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">3徵兆理解孩子為什麼不說真話，4技巧對應該怎麼辦，別讓孩子為了讓妳高興，而輕易說下謊言 編輯 Vicky 圖 翻攝thr</td><td style="color:#757575">+0.000</td><td>17</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">｣該怎麼辦</td><td style="color:#757575">+0.000</td><td>11</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">紅毛猩猩Amber喜歡跟遊客互動 ，手敲窗戶求看寶寶，如願靠近竟然「嘴貼玻璃送上2個吻」 編輯 / Vicky 圖 / </td><td style="color:#757575">+0.000</td><td>10</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">手足爭寵怎麼辦</td><td style="color:#757575">+0.000</td><td>9</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">為什麼會發生</td><td style="color:#757575">+0.000</td><td>8</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">」堅持與妥協之間，父母該怎麼辦</td><td style="color:#757575">+0.000</td><td>8</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">竟然有這種爸爸</td><td style="color:#757575">+0.000</td><td>7</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">手機收到陌生訊息，該怎麼辦</td><td style="color:#757575">+0.000</td><td>7</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">父母心疼又氣憤之餘，該怎麼辦</td><td style="color:#757575">+0.000</td><td>7</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">傍晚變身「黏人精」怎麼辦</td><td style="color:#757575">+0.000</td><td>6</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">專家：產後極端行為，往往與孤立與心理崩潰有關</td><td style="color:#757575">+0.000</td><td>6</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">寶寶放下就哭怎麼辦</td><td style="color:#757575">+0.000</td><td>6</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">新手爸媽最崩潰的0到4個月，寶寶不睡覺的四個原因一定要知道</td><td style="color:#757575">+0.000</td><td>6</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">真相一出：竟然是全家的快樂回憶</td><td style="color:#757575">+0.000</td><td>6</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">媽媽恐嚇「把你賣了啊」也無效</td><td style="color:#757575">+0.000</td><td>6</td><td>通用</td></tr>
+<tr><td colspan="4" style="background:#E8F5E9;font-weight:600;padding:6px 12px">推薦（9685 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">2024卸妝洗臉10款推薦</td><td style="color:#757575">+0.000</td><td>17</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">優惠內容：(若無免填) 心得內容：</td><td style="color:#388E3C">+0.491</td><td>14</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">離婚忍痛把大女兒給前夫，被老師告知孩子一直穿髒衣服，呂秋遠律師分享單親媽媽痛苦遭遇 編輯：Sinyu 整理：亞潔圖：sh</td><td style="color:#757575">+0.000</td><td>13</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">歡迎和我們分享</td><td style="color:#757575">+0.000</td><td>13</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">13種美容油用法，冬季肌膚最暖保養推薦</td><td style="color:#757575">+0.000</td><td>12</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">2025日本媽媽最愛秋冬眼影推薦</td><td style="color:#757575">+0.000</td><td>10</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">2024秋冬底妝8推薦</td><td style="color:#757575">+0.000</td><td>10</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">北北基寶寶分享團 預計徵求人數：</td><td style="color:#757575">+0.056</td><td>9</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">寶雅2023上半年生活好物推薦</td><td style="color:#757575">+0.000</td><td>8</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">5大人氣孕婦SPA療程推薦</td><td style="color:#757575">+0.000</td><td>8</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">頭皮養髮精華推薦</td><td style="color:#757575">+0.000</td><td>8</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">推薦給全家的理財書單，讓孩子知道「為什麼我不能把錢花光光</td><td style="color:#757575">+0.000</td><td>8</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">時隔多年來的二寶，想找同為是明年生寶寶的孕媽咪一起分享孕期心情、交流育兒的點點</td><td style="color:#757575">+0.000</td><td>8</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">此外，提供所有的媽媽們，一個討論分享的空間，更歡迎媽媽們「線上投稿」，來「媽媽經」，一同來聊「媽媽經」</td><td style="color:#757575">+0.000</td><td>7</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">13款護唇推薦，媽媽「唇」美力養成全攻略：保濕、潤色、撫紋一次到位 Vicky 數位總監 今天一杯咖啡，明天公園嬉戲，讓</td><td style="color:#757575">+0.000</td><td>7</td><td>孕產保養</td></tr>
+<tr><td colspan="4" style="background:#E3F2FD;font-weight:600;padding:6px 12px">嚮往（11177 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">Bella儂儂是你最信任的夥伴，看見都會女性擁有的各種樣貌，成熟，自信，追求夢想，信仰女性具有豐富的內在涵養與勇敢的自信</td><td style="color:#757575">+0.000</td><td>107</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">想要知道我們吵吵鬧鬧的生活故事嗎</td><td style="color:#757575">+0.000</td><td>22</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">七張漫畫，真實呈現每天妳與孩子相處日常，他們只想要陪伴，「今天，你願意為孩子放下手機嗎</td><td style="color:#757575">+0.000</td><td>13</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">Scarlett 外稿編輯 熱愛收集繪本，夢想為孩子講述超越《一千零一夜》的睡前故事</td><td style="color:#757575">+0.000</td><td>12</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">除了盡己所能守護母胎的健康，也希望透過衛教文章解除大家心中的種種疑問，快樂度過孕期</td><td style="color:#757575">+0.000</td><td>12</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">全職媽咪或在職媽咪都可以，希望不要太常潛水，多互動</td><td style="color:#757575">+0.000</td><td>12</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">真的只要一滴，從頭到腳想要的潤澤、保濕、舒緩都有了</td><td style="color:#757575">+0.000</td><td>11</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">冰棒熱狗都沒問題，全網爸媽大讚：怎麼現在才知道</td><td style="color:#757575">+0.000</td><td>10</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">孩子睡著後，她們穿著睡衣、敷著面膜搞笑跳舞，許多哀怨媽媽喊：想要這樣的朋友</td><td style="color:#757575">+0.000</td><td>10</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">《汪汪隊》幕後推手 Malabar：孩子們想要擁有的，是一家人坐在一起看電視的幸福 Scarlett 外稿編輯 熱愛收集</td><td style="color:#757575">+0.000</td><td>9</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">精算生活，創造理想人生的珊迪兔，曾遭遇人生低谷、不堪回首的財務困境、成為媽咪後在職業生涯上的轉折，樂於面對挑戰、喜歡與問</td><td style="color:#757575">+0.000</td><td>9</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">5歲小男孩跟媽媽許願，想要邀請偶像紅髮艾德參加他的生日，沒想到暖心的創作歌手巨星真的有了回應，小迷弟又驚又喜 文 / 陳</td><td style="color:#757575">+0.000</td><td>8</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">2026春夏10款底妝神器</td><td style="color:#757575">+0.000</td><td>8</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">在這裡，妳可以學知識，分享任何生活大小「識」，也希望每位媽媽除了在家庭之外，也能在「媽媽經」的園地裡，創造出更高的成就感</td><td style="color:#757575">+0.000</td><td>7</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">媽寶情報員 情報編輯 喜歡挖掘對爸媽真正有幫助的母嬰好康與生活資訊，希望在忙碌的育兒日常中，幫你多省一點時間、多賺一點安</td><td style="color:#757575">+0.000</td><td>7</td><td>新生兒0-3M</td></tr>
+<tr><td colspan="4" style="background:#F3E5F5;font-weight:600;padding:6px 12px">比較（7223 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">妳的選擇困難就讓專業醫師來解答</td><td style="color:#757575">+0.000</td><td>13</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">「心靈富足」VS「物質富足」，你怎麼選</td><td style="color:#757575">+0.000</td><td>10</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">AI下的媽媽各個都像武林高手，爸爸：孩子，我們還是乖乖聽話比較安全</td><td style="color:#757575">+0.000</td><td>10</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">有選擇困難</td><td style="color:#757575">+0.000</td><td>9</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">流行的醫美療程怎麼選</td><td style="color:#757575">+0.000</td><td>8</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">讓孩子心靈受傷的比較</td><td style="color:#757575">+0.000</td><td>6</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">動物媽媽的育兒經無奇不有 !「無尾熊餵小孩吃便便」「長頸鹿爆踢剛出生的寶寶」， 比起來我們都是好媽媽 編輯 / Vick</td><td style="color:#757575">+0.000</td><td>6</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">從保養到彩妝一應俱全，MEKO純素刷具、超萌飛天小女警痘痘貼，CP值超高讓你忍不住下手</td><td style="color:#757575">+0.000</td><td>6</td><td>孕產保養</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">用紫微斗數的邏輯智慧，釐清親子間的天生差異，也讀懂關係的牽引</td><td style="color:#757575">+0.000</td><td>6</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">流程、優缺點一次看</td><td style="color:#757575">+0.000</td><td>5</td><td>孕晚期</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">育嬰假現行制度VS.試行制度比較</td><td style="color:#757575">+0.000</td><td>5</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">Melody：比起一百分的婚姻，做到這5點 ， 讓你擁有更好的自己 ，比甚麼都重要</td><td style="color:#757575">+0.000</td><td>5</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">爸媽離婚為他住哪裡不斷爭吵，孩子問：我死了是不是會比較好，因為就不必搶了......</td><td style="color:#757575">+0.000</td><td>5</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">人類偏肺病毒、蘋果病、黴漿菌肺炎比一比，症狀都很像怎分辨</td><td style="color:#757575">+0.000</td><td>5</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">聽到「你來， 我們都比較輕鬆</td><td style="color:#757575">+0.000</td><td>5</td><td>通用</td></tr>
+<tr><td colspan="4" style="background:#FFF8E1;font-weight:600;padding:6px 12px">疑慮（1487 筆）</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">狠父長期虐待，兩拳揍2歲兒，導致肝臟破裂致死，判18年定讞</td><td style="color:#757575">+0.000</td><td>6</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">致命兩拳肝臟破裂、胃內容物流出500cc</td><td style="color:#757575">+0.000</td><td>6</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">情感破裂、身心壓力，疑成引爆點</td><td style="color:#757575">+0.000</td><td>6</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">水果發霉「切掉」可以再吃嗎</td><td style="color:#757575">+0.000</td><td>6</td><td>通用</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">約定破裂，這是第一次嗎</td><td style="color:#757575">+0.000</td><td>4</td><td>幼兒1-3Y</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">尤其當女性處於關係破裂、經濟壓力、缺乏支持或隱瞞懷孕狀態時，心理負荷往往更高</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">靖娟基金會於今年2月至3月，針對六都育有1歲以下嬰兒之家長進行問卷調查，共回收406份有效樣本</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">照顧孩子是一場愛心與耐心的持久戰，好不容易抓出節奏，新的挑戰往往隨之而來…來自法國、擁有超過75年歷史的Mustela慕</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">爸媽務必選擇通過國家或國際安全認證的產品，不用來路不明或過於廉價的嬰兒床，以免不慎使用到劣質材質，影響嬰幼兒的睡眠安全</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">慕之恬廊堅持以天然、有效為研發理念，產品上市前通過450道嚴格測試，不添加酒精、色素與Paraben防腐劑，陪伴每個家庭</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">例如是否要例行視察、突發訓練要求、申訴管道與家長權益保護等條款，都未在母法中完整，這些都是未來法制必須重點補足的項目</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">這類玩具一旦破裂，液體滲漏後被吸入，後果往往比誤食固體異物更為嚴重</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">事件再次引發民眾對中國玩具製造與安檢機制的質疑，包括回收塑料再製、化學添加劑超標、標示不清等問題</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">避免購買不明來源、過度廉價的玩具，尤其是內含液體、膠狀、可擠壓、可破裂的產品，不建議給3歲以下幼兒使用</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+<tr><td style="max-width:400px;word-break:break-all">無添加Paraben、皂鹼、人工發泡劑與易致敏香料的設計，讓每一次清潔都只留下潔淨與舒適，而不留下負擔</td><td style="color:#757575">+0.000</td><td>3</td><td>新生兒0-3M</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- Objections -->
+<section id="objections">
+<h2>異議清單</h2>
+<div id="chartObj"></div>
+<script>Plotly.newPlot("chartObj",[{"type": "bar", "x": ["價格CP", "業配疑慮", "品牌信任", "退換貨", "過敏", "安全成分"], "y": [0.6715, 0.5, 0.4695, 0.3675, 0.3628, 0.3527], "marker": {"color": "#E53935"}, "text": ["3 篇", "1 篇", "48 篇", "1 篇", "1 篇", "13 篇"], "textposition": "outside", "hovertemplate": "%{x}<br>嚴重度: %{y:.4f}<br>%{text}<extra></extra>"}],{"title": {"text": "異議清單 — 嚴重度", "font": {"size": 14}}, "height": 320, "margin": {"l": 60, "r": 30, "t": 50, "b": 80}, "yaxis": {"title": "嚴重度 (abs pn_score)"}, "plot_bgcolor": "#fafafa", "paper_bgcolor": "#fff"});</script>
+</section>
+
+<!-- Google -->
+<section id="google">
+<h2>Google Ads — 關鍵字群組</h2>
+<div id="chartKw"></div>
+<script>Plotly.newPlot("chartKw",[{"type": "bar", "x": [9936, 7675, 6710, 6262, 5890, 5638, 4871, 4812, 4422, 3982, 3793, 3565, 3563, 3535, 3412, 3065, 3049, 2915, 2633, 2389, 2359, 2288, 2269, 2209, 2105, 2079, 1794, 1650, 1602, 1572, 1453, 1240, 1240, 1213, 1203, 1042, 929, 876, 860, 766], "y": ["保母", "托嬰", "尿布", "推車", "玩具", "幼兒園", "過敏", "疫苗", "親餵", "奶嘴", "母乳", "副食品", "安撫", "發燒", "奶粉", "奶瓶", "月嫂", "汽座", "說話", "哺乳", "嬰兒床", "托育", "配方奶", "托嬰中心", "月子中心", "好奇", "益生菌", "提籃", "公托", "監視器", "哄睡", "睡過夜", "翻身", "瓶餵", "脹氣", "夜奶", "揹巾", "包巾", "湯匙", "積木"], "orientation": "h", "marker": {"color": ["#1976D2", "#1976D2", "#1976D2", "#1976D2", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#1976D2", "#388E3C", "#388E3C", "#1976D2", "#1976D2", "#1976D2", "#1976D2", "#388E3C", "#388E3C", "#1976D2", "#1976D2", "#1976D2", "#388E3C", "#1976D2", "#388E3C", "#1976D2", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#388E3C", "#1976D2", "#388E3C", "#388E3C", "#388E3C"]}, "text": ["交易型", "交易型", "交易型", "交易型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "交易型", "資訊型", "資訊型", "交易型", "交易型", "交易型", "交易型", "資訊型", "資訊型", "交易型", "交易型", "交易型", "資訊型", "交易型", "資訊型", "交易型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "資訊型", "交易型", "資訊型", "資訊型", "資訊型"], "hovertemplate": "%{y}<br>頻率: %{x}<br>意圖: %{text}<extra></extra>"}],{"title": {"text": "關鍵字資產（藍=交易型 紫=比較型 綠=資訊型）", "font": {"size": 14}}, "height": 960, "margin": {"l": 130, "r": 60, "t": 50, "b": 40}, "xaxis": {"title": "出現頻率"}, "yaxis": {"autorange": "reversed"}, "plot_bgcolor": "#fafafa", "paper_bgcolor": "#fff"});</script>
+<h3 style="margin-top:20px">完整關鍵字群組</h3>
+<table>
+<thead><tr><th>生命階段</th><th>產品類別</th><th>聲量</th><th>核心關鍵字</th><th>排除字</th></tr></thead>
+<tbody><tr><td>通用</td><td>推車</td><td>60</td><td style="font-size:.85em">通用、推車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕晚期</td><td>托嬰</td><td>30</td><td style="font-size:.85em">孕晚期、托嬰</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>保母</td><td>23</td><td style="font-size:.85em">學齡前3-6Y、保母</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>嬰兒床</td><td>20</td><td style="font-size:.85em">幼兒1-3Y、嬰兒床</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>揹巾</td><td>19</td><td style="font-size:.85em">通用、揹巾</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>汽座</td><td>19</td><td style="font-size:.85em">副食品4-12M、汽座</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕晚期</td><td>副食品</td><td>18</td><td style="font-size:.85em">孕晚期、副食品</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>汽座</td><td>17</td><td style="font-size:.85em">學齡前3-6Y、汽座</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>新生兒0-3M</td><td>搖籃</td><td>17</td><td style="font-size:.85em">新生兒0-3M、搖籃</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>推車</td><td>15</td><td style="font-size:.85em">副食品4-12M、推車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>尿布</td><td>14</td><td style="font-size:.85em">學齡前3-6Y、尿布</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>嬰兒床</td><td>13</td><td style="font-size:.85em">副食品4-12M、嬰兒床</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>安全座椅</td><td>11</td><td style="font-size:.85em">通用、安全座椅</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>背巾</td><td>11</td><td style="font-size:.85em">通用、背巾</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>吸乳器</td><td>11</td><td style="font-size:.85em">通用、吸乳器</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕早期</td><td>益生菌</td><td>11</td><td style="font-size:.85em">孕早期、益生菌</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕中期</td><td>月子中心</td><td>10</td><td style="font-size:.85em">孕中期、月子中心</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>備孕</td><td>益生菌</td><td>8</td><td style="font-size:.85em">備孕、益生菌</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>副食品4-12M</td><td>揹巾</td><td>8</td><td style="font-size:.85em">副食品4-12M、揹巾</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>親子課程</td><td>7</td><td style="font-size:.85em">幼兒1-3Y、親子課程</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>嬰兒車</td><td>7</td><td style="font-size:.85em">幼兒1-3Y、嬰兒車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>月嫂</td><td>7</td><td style="font-size:.85em">通用、月嫂</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕晚期</td><td>汽座</td><td>7</td><td style="font-size:.85em">孕晚期、汽座</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕早期</td><td>月子中心</td><td>6</td><td style="font-size:.85em">孕早期、月子中心</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>搖籃</td><td>6</td><td style="font-size:.85em">幼兒1-3Y、搖籃</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>幼兒1-3Y</td><td>月子中心</td><td>6</td><td style="font-size:.85em">幼兒1-3Y、月子中心</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕中期</td><td>托嬰</td><td>6</td><td style="font-size:.85em">孕中期、托嬰</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>孕期</td><td>托育</td><td>5</td><td style="font-size:.85em">孕期、托育</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>通用</td><td>嬰兒車</td><td>5</td><td style="font-size:.85em">通用、嬰兒車</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+<tr><td>學齡前3-6Y</td><td>奶粉</td><td>5</td><td style="font-size:.85em">學齡前3-6Y、奶粉</td><td style="font-size:.85em;color:#c62828">—</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- Meta -->
+<section id="meta">
+<h2>Meta Ads — 創意角度</h2>
+<div class="cards">
+<div class="card">
+  <div class="card-tag">通用 · 罪惡感緩解</div>
+  <div class="card-hook">3徵兆理解孩子為什麼不說真話，4技巧對應該怎麼辦，別讓孩子為了讓妳高興，而輕易說</div>
+  <div class="card-src">3徵兆理解孩子為什麼不說真話，4技巧對應該怎麼辦，別讓孩子為了讓妳高興，而輕易說下謊言 編輯 Vicky 圖 翻攝thr</div>
+</div><div class="card">
+  <div class="card-tag">幼兒1-3Y · 罪惡感緩解</div>
+  <div class="card-hook">｣該怎麼辦</div>
+  <div class="card-src">｣該怎麼辦</div>
+</div><div class="card">
+  <div class="card-tag">新生兒0-3M · 罪惡感緩解</div>
+  <div class="card-hook">為什麼會發生</div>
+  <div class="card-src">為什麼會發生</div>
+</div><div class="card">
+  <div class="card-tag">孕期 · 罪惡感緩解</div>
+  <div class="card-hook">一直擔心寶寶、擔心自己，該怎麼辦</div>
+  <div class="card-src">一直擔心寶寶、擔心自己，該怎麼辦</div>
+</div><div class="card">
+  <div class="card-tag">孕晚期 · 罪惡感緩解</div>
+  <div class="card-hook">我該怎麼辦</div>
+  <div class="card-src">我該怎麼辦</div>
+</div><div class="card">
+  <div class="card-tag">孕產保養 · 罪惡感緩解</div>
+  <div class="card-hook">換季肌膚敏感脫屑，怎麼辦</div>
+  <div class="card-src">換季肌膚敏感脫屑，怎麼辦</div>
+</div><div class="card">
+  <div class="card-tag">孕中期 · 罪惡感緩解</div>
+  <div class="card-hook">手術台上...深愛的老公竟然選擇放棄我</div>
+  <div class="card-src">手術台上...深愛的老公竟然選擇放棄我</div>
+</div><div class="card">
+  <div class="card-tag">學齡前3-6Y · 罪惡感緩解</div>
+  <div class="card-hook">荳荳迪迪最近很愛畫畫，尤其是荳荳眼睛很亮，逛個7-11看到影印機上的多多XOPE</div>
+  <div class="card-src">荳荳迪迪最近很愛畫畫，尤其是荳荳眼睛很亮，逛個7-11看到影印機上的多多XOPEN小畫家活動，說想要參加😄 拿到專屬的著</div>
+</div>
+</div>
+</section>
+
+<!-- Compliance -->
+<div class="compliance-box">
+<h2>⚠ 合規警示 — 需法務確認，不可直接投放</h2>
+<table>
+<thead><tr><th>風險類型</th><th>篇數</th><th>範例標題</th></tr></thead>
+<tbody><tr><td><strong>醫療效能</strong></td><td>740</td><td style="font-size:.85em">自費產檢有必要嗎？婦產科醫師推薦這三項一定要做！<br>懷孕超初期常見10徵兆&amp;症狀，媽媽經驗談及醫師建議<br>為什麼婦產科醫師建議孕婦睡覺時要左側躺？</td></tr>
+<tr><td><strong>療效宣稱</strong></td><td>1511</td><td style="font-size:.85em">產前產後都可能憂鬱症 媽媽別害怕有這2種治療方法<br>子宮外孕如何確診？及早發現可用藥物治療<br>胎內治療　幫助挽救胎兒生命</td></tr>
+<tr><td><strong>配方奶廣告限制</strong></td><td>213</td><td style="font-size:.85em">在婆家坐月子!不如去月子中心坐月子之我的月子中心分享2020-12-23 16:<br>寶寶要轉配方奶了，可以銜接母乳配方建議？2021-10-13 12:22:51孕<br>求救，母乳很少2016-5-21 22:34:25孕哺大小事6592</td></tr>
+</tbody>
+</table>
+<h3>受限 Segments</h3>
+<ul><li>通用 × 通用（11504 篇）</li><li>幼兒1-3Y × 通用（3005 篇）</li><li>新生兒0-3M × 通用（1232 篇）</li><li>孕晚期 × 通用（1080 篇）</li><li>新生兒0-3M × 推車（462 篇）</li><li>孕中期 × 通用（398 篇）</li><li>備孕 × 通用（374 篇）</li><li>學齡前3-6Y × 通用（371 篇）</li><li>孕產保養 × 通用（364 篇）</li><li>副食品4-12M × 通用（363 篇）</li><li>新生兒0-3M × 奶粉（314 篇）</li><li>新生兒0-3M × 尿布（288 篇）</li><li>副食品4-12M × 副食品（275 篇）</li><li>孕晚期 × 月子中心（266 篇）</li><li>幼兒1-3Y × 托嬰（259 篇）</li><li>通用 × 尿布（255 篇）</li><li>新生兒0-3M × 嬰兒床（252 篇）</li><li>新生兒0-3M × 奶瓶（228 篇）</li><li>新生兒0-3M × 配方奶（217 篇）</li><li>幼兒1-3Y × 尿布（208 篇）</li><li>…等共 102 個 Segment</li></ul>
+<p class="compliance-note">以上素材已與一般素材隔離。投放前請與法務確認是否符合《嬰兒及較大嬰兒配方食品廣告及促銷管理辦法》及相關醫療廣告規定。</p>
+</div>
+
+</div><!-- /content -->
+</div><!-- /layout -->
+</body>
+</html>
